@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <title>API Test | Home</title>
+  </head>
+  <body>
+    <main role="main">
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        Congrats! You're successfully running the API
+      </div>
+      <h2>Routes</h2>
+
+      <table class="table">
+        <thead class="thead-dark" align="center">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Method</th>
+            <th scope="col">Parameters</th>
+          </tr>
+        </thead>
+        <tbody align="center">
+          <tr>
+            <td class="align-middle">localhost/api/v1/register</td>
+            <td class="align-middle">POST</td>
+            <td>
+              <ul class="list-unstyled">
+                <li>email: test@test.com</li>
+                <li>password: 12345678</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="align-middle">localhost/api/v1/login</td>
+            <td class="align-middle">GET</td>
+            <td>
+              <ul class="list-unstyled">
+                <li>email: test@test.com</li>
+                <li>password: 12345678</li>
+                <li>application_id: 5b51eb29303935456453d09a</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>localhost/api/v1/logout</td>
+            <td>GET</td>
+            <td>access_token: Obtained at login</td>
+          </tr>
+          <tr>
+            <td>localhost/api/v1/graphs</td>
+            <td>GET</td>
+            <td>access_token: Obtained at login</td>
+          </tr>
+          <tr>
+            <td class="align-middle">localhost/api/v1/graphs</td>
+            <td class="align-middle">POST</td>
+            <td>
+              <ul class="list-unstyled">
+                <li>access_token: Obtained at login</li>
+                <li>entity: post</li>
+                <li>container_id: user id</li>
+                <li>title: Test Post</li>
+                <li>description: Elit expedita molestias</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="align-middle">localhost/api/v1/graphs</td>
+            <td class="align-middle">PUT</td>
+            <td>
+              <ul class="list-unstyled">
+                <li>access_token: Obtained at login</li>
+                <li>id: id of the post you want to modify</li>
+                <li>title: New title</li>
+                <li>description: New description</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="align-middle">localhost/api/v1/graphs</td>
+            <td class="align-middle">DELETE</td>
+            <td>
+              <ul class="list-unstyled">
+                <li>access_token: Obtained at login</li>
+                <li>entities_ids: ids of the posts you want to delete</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </main>
+    <script src="plugins/jquery/jquery-3.3.1.min.js"></script>
+    <script src="plugins/popper/popper.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
